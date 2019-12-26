@@ -1,0 +1,184 @@
+/*-----------
+base
+-------------*/
+/* variables */
+:root {
+  --text-color-white: hsl(0, 0%, 96%);
+  --text-color-light-gray:  hsl(0, 0%, 48%);
+  --bg-color-light-gray: hsl(0, 0%, 96%);
+  --bg-color-dark-gray: hsl(0, 0%, 21%);
+}
+
+/* reset */
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+/* font  */
+html, body {  font-family: sans-serif }
+pre, code { font-family: 'Source Code Pro', monospace }
+header h1 { font-size: 1.5rem }
+footer { font-size: .7rem }
+
+/* layout */
+.main-container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.container {
+  width: 60vw;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+  }
+}
+header, main, footer {
+  display: flex;
+  justify-content: center;
+}
+header {
+  padding: .5rem 0;
+}
+footer {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* color */
+header {
+  background-color: var(--bg-color-dark-gray);
+}
+header a {
+  text-decoration: none;
+  color: var(--text-color-white);
+}
+header a:visited {
+  color: var(--text-color-white);
+}
+footer {
+  background-color: var(--bg-color-light-gray);
+  color: var(--text-color-light-gray);
+}
+code {
+  background-color: var(--bg-color-light-gray) !important;
+}
+
+/*-----------
+common style
+-------------*/
+.date {
+  display: block;
+  font-size: .8rem;
+  color: var(--text-color-light-gray)
+}
+
+.tag {
+  font-size: .8rem;
+}
+.tag a {
+  text-decoration: none;
+  color: var(--text-color-light-gray)
+}
+.tag a:visited {
+  color: var(--text-color-light-gray)
+}
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.tags li {
+  margin-right: .5rem;
+}
+.tags li:last-child {
+  margin: 0;
+}
+
+/*-----------
+list
+-------------*/
+/* reset */
+.article-list {
+  /* margin: 0; */
+  padding: 0;
+  list-style: none;
+}
+/* list style */
+.article-list li {
+  margin-bottom: 1.5rem;
+}
+
+/*-----------
+single
+-------------*/
+.article-page h2 {
+  margin-bottom: 0;
+}
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+.pagination li {
+  padding: 0 0.5rem;
+}
+.pagination li a {
+  text-decoration: none;
+  color: black;
+}
+.pagination li.active {
+  background-color: #e6e6e6;
+  border-radius: 2px;
+}
+.pagination li.active a {
+  color: black;
+}
+.pagination li.disabled a {
+  cursor: default;
+  pointer-events: none;
+  color: #e6e6e6;
+}
+.pagination li:first-child span {
+  font-size: 0;
+}
+.pagination li:first-child span:after {
+  font-size: 1rem;
+  content: "|<";
+}
+.pagination li:nth-child(2) span {
+  font-size: 0;
+}
+.pagination li:nth-child(2) span:after {
+  font-size: 1rem;
+  content: "<";
+}
+.pagination li:nth-last-child(2) span {
+  font-size: 0;
+}
+.pagination li:nth-last-child(2) span:after {
+  font-size: 1rem;
+  content: ">";
+}
+.pagination li:last-child span {
+  font-size: 0;
+}
+.pagination li:last-child span:after {
+  font-size: 1rem;
+  content: ">|";
+}

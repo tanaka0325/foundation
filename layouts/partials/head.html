@@ -1,0 +1,20 @@
+<head>
+    {{ .Hugo.Generator }}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github-gist.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
+
+    <link rel="preload" as="script" href="{{ .Site.BaseURL }}js/highlight.pack.js">
+
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
+</head>
+

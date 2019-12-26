@@ -1,0 +1,13 @@
+name = "foundation"
+license = "MIT"
+licenselink = "https://github.com/tanaka0325/foundation/blob/master/LICENSE"
+description = "more simple hugo theme"
+homepage = "https://github.com/tanaka0325/foundation"
+tags = ["blog", "minimal", "responsive"]
+features = ["blog", "themes", "minimal", "responsive"]
+min_version = "0.41"
+
+[author]
+  name = "Hiroyuki Tanaka"
+  homepage = "https://github.com/tanaka0325/"
+
