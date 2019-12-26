@@ -74,14 +74,34 @@ code {
 }
 
 /*-----------
-common style
+page
 -------------*/
+/* list */
+.article-list {
+  /* margin: 0; */
+  padding: 0;
+  list-style: none;
+}
+.article-list li {
+  margin-bottom: 1.5rem;
+}
+
+/* single */
+.article-page h2 {
+  margin-bottom: 0;
+}
+
+/*-----------
+components
+-------------*/
+/* date  */
 .date {
   display: block;
   font-size: .8rem;
   color: var(--text-color-light-gray)
 }
 
+/* tag */
 .tag {
   font-size: .8rem;
 }
@@ -105,30 +125,7 @@ common style
   margin: 0;
 }
 
-/*-----------
-list
--------------*/
-/* reset */
-.article-list {
-  /* margin: 0; */
-  padding: 0;
-  list-style: none;
-}
-/* list style */
-.article-list li {
-  margin-bottom: 1.5rem;
-}
-
-/*-----------
-single
--------------*/
-.article-page h2 {
-  margin-bottom: 0;
-}
-
-
-
-
+/* pagination */
 .pagination {
   display: flex;
   justify-content: center;
