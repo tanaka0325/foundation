@@ -91,6 +91,12 @@ page
   margin-bottom: 0;
 }
 
+/* terms */
+.terms h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 /*-----------
 components
 -------------*/
