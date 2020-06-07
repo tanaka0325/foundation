@@ -70,9 +70,6 @@ footer {
   background-color: var(--bg-color-light-gray);
   color: var(--text-color-light-gray);
 }
-code {
-  background-color: var(--bg-color-light-gray) !important;
-}
 
 /*-----------
 page
@@ -101,6 +98,11 @@ page
 /*-----------
 components
 -------------*/
+/* code block */
+.highlight pre {
+  padding: 10px;
+}
+
 /* date  */
 .date {
   display: block;
