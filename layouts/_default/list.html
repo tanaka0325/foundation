@@ -1,18 +1,24 @@
 {{ define "main" }}
-  <ul class="article-list">
-    {{ range .Paginator.Pages }}
+<main>
+  <div class="container">
+    <ul class="article-list">
+      {{ range .Paginator.Pages }}
       <li>
         <span class="date">{{ .Date.Format "2006/01/02" }}</span>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <ul class="tags">
           {{ range .Params.tags }}
           <li>
-            <span class="tag"><a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
+            <span class="tag">
+              <a href="{{ $.Site.LanguagePrefix | absURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
+            </span>
           </li>
           {{ end }}
         </ul>
       </li>
-    {{ end }}
-  </ul>
-  {{ template "_internal/pagination.html" . }}
+      {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</main>
 {{ end }}

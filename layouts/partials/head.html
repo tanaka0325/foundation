@@ -1,18 +1,18 @@
 <head>
-    {{ hugo.Generator }}
+  {{ hugo.Generator }}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+  <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
 
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
 </head>
 

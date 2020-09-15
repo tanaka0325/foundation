@@ -1,11 +1,12 @@
 {{ define "main" }}
+{{- partial "header.html" . -}}
 <main>
   <div class="container">
-    <article class="article-page">
-      <h1 class="title">{{ .Title }}</h1>
-      <div class="meta">
+    <ul class="article-list">
+      {{ range .Paginator.Pages }}
+      <li>
         <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-        {{ if .Params.tags}}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
         <ul class="tags">
           {{ range .Params.tags }}
           <li>
@@ -15,10 +16,10 @@
           </li>
           {{ end }}
         </ul>
-        {{ end }}
-      </div>
-      <section>{{ .Content }}</section>
-    </article>
+      </li>
+      {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
   </div>
 </main>
 {{ end }}
