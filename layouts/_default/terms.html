@@ -1,13 +1,17 @@
 {{ define "main" }}
-  <article class="terms">
-    <h2 class="title">tags</h2>
-    <ul>
-      {{ $plural := .Data.Plural }}
-      {{ range $name, $value := .Data.Terms }}
-      <li>
-        <a href="/{{ $plural }}/{{ $name | urlize }}">{{ $name }} ({{ len $value }})</a>
-      </li>
-      {{ end }}
-    <ul>
-  </article>
+<main>
+  <div class="main-container">
+    <article class="terms">
+      <h1 class="title">tags</h1>
+      <ul>
+        {{ $plural := .Data.Plural }}
+        {{ range $name, $value := .Data.Terms }}
+        <li>
+          <a href="/{{ $plural }}/{{ $name | urlize }}">{{ $name }} ({{ len $value }})</a>
+        </li>
+        {{ end }}
+      <ul>
+    </article>
+  </div>
+</main>
 {{ end }}
