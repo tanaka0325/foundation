@@ -120,6 +120,14 @@ code:not([class]) {
   font-size: 0.8rem;
 }
 
+/* blockquote  */
+blockquote {
+  font-style: italic;
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 5px solid gray;
+}
+
 /* footer links */
 .footer-links {
   display: flex;
